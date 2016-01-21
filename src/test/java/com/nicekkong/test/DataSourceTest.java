@@ -1,4 +1,4 @@
-package com.nicekong.test;
+package com.nicekkong.test;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
