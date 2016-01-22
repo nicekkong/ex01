@@ -1,4 +1,4 @@
-package com.nicekkong.controller;
+package com.nicekkong.board;
 
 import org.junit.Before;
 import org.junit.Test;

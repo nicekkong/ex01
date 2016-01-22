@@ -1,4 +1,4 @@
-package com.nicekkong.controller;
+package com.nicekkong.board.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

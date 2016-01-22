@@ -39,7 +39,7 @@
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>A</b>LT</span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>Zerock</b> PROJECT</span>
+          <span class="logo-lg"><b>Nicekkong</b> WORLD</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -455,8 +455,8 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Board Management
-            <small>Preview</small>
+            게시판 관리
+            <small>미리보기</small>
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
