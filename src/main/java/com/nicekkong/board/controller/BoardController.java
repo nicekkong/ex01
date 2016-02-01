@@ -10,6 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.inject.Inject;
+
 /**
  * Created by 1001857 on 16. 1. 26..
  */

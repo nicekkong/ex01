@@ -1,4 +1,4 @@
-package com.nicekkong.board.Dao;
+package com.nicekkong.board.dao;
 
 import com.nicekkong.board.domain.Board;
 

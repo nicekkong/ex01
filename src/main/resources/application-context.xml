@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!--<context:component-scan base-package="com.nicekkong.board" />-->
+    <context:component-scan base-package="com.nicekkong.board" />
+    <context:component-scan base-package="com.nicekkong.board.service" />
+
+<!--    <context:component-scan base-package="com.nicekkong.board" scoped-proxy="no">
+        <context:include-filter type="regex" expression="com.nicekkong.board.controller"/>
+        <context:include-filter type="regex" expression="com.nicekkong.board.service"/>
+    </context:component-scan>-->
+
+
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
-        <property name="url" value="jdbc:log4jdbc:mysql://localhost:3306/book_ex" />
+        <property name="url" value="jdbc:log4jdbc:mysql://127.0.0.1:3306/book_ex" />
         <property name="username" value="zerock" />
         <property name="password" value="Zerock1!" />
     </bean>
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource"/>
-        <property name="configLocation" value="classpath:/mybatis-config.xml"/>
+    <property name="dataSource" ref="dataSource" />
+        <property name="configLocation" value="classpath:/mybatis-config.xml" />
         <property name="mapperLocations" value="classpath:mappers/**/*Mapper.xml" />
     </bean>
 
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
-        <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"/>
+        <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" />
     </bean>
-
-
-    <context:component-scan base-package="com.nicekkong.board" />
 
 </beans>

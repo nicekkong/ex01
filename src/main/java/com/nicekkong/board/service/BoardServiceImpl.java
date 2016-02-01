@@ -1,6 +1,6 @@
 package com.nicekkong.board.service;
 
-import com.nicekkong.board.Dao.BoardDao;
+import com.nicekkong.board.dao.BoardDao;
 import com.nicekkong.board.domain.Board;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,11 +1,11 @@
-package com.nicekkong.board.Dao;
+package com.nicekkong.board.dao;
 
 import com.nicekkong.board.domain.Board;
-import org.apache.ibatis.session.SqlSession;
-import org.springframework.stereotype.Repository;
-
-import javax.inject.Inject;
 import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 /**
  * Created by 1001857 on 16. 1. 25..
@@ -13,7 +13,7 @@ import java.util.List;
 @Repository
 public class BoardDaoImpl implements BoardDao {
 
-    @Inject
+    @Autowired
     private SqlSession session;
 
     private static String namespace = "com.nicekkong.mapper.BoardMapper"; // mapper.xml 파일에서 namespace로 작성한 이름
