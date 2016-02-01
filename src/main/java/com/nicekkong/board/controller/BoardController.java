@@ -27,8 +27,10 @@ public class BoardController {
 
     // 등록 화면 이동
     @RequestMapping(value = "/register", method = RequestMethod.GET)
-    public void registerGET(Board board, Model model) throws Exception {
+    public String registerGET(Board board, Model model) throws Exception {
         logger.info("Register get..........");
+
+        return "board/register";
     }
 
     // 등록 처리
@@ -45,6 +47,13 @@ public class BoardController {
 
         model.addAttribute("result", "success");
 
-        return "/board/success";
+        //return "/board/success";
+        return "redirect:board/listAll";
+    }
+
+    //전체 리스트 화면
+    @RequestMapping(value = "/listAll", method = RequestMethod.GET)
+    public void listAll(Model model) throws Exception {
+        logger.debug("listAll GET .........");
     }
 }

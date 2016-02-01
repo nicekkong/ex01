@@ -7,13 +7,13 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="com.nicekkong.board" />
-    <context:component-scan base-package="com.nicekkong.board.service" />
+<!--    <context:component-scan base-package="com.nicekkong.board" />
+    <context:component-scan base-package="com.nicekkong.board.service" />-->
 
-<!--    <context:component-scan base-package="com.nicekkong.board" scoped-proxy="no">
-        <context:include-filter type="regex" expression="com.nicekkong.board.controller"/>
-        <context:include-filter type="regex" expression="com.nicekkong.board.service"/>
-    </context:component-scan>-->
+    <context:component-scan base-package="com.nicekkong.board" scoped-proxy="no">
+        <context:exclude-filter type="regex" expression="com.nicekkong.board.controller"/>
+        <!--<context:include-filter type="regex" expression="com.nicekkong.board.service"/>-->
+    </context:component-scan>
 
 
 
