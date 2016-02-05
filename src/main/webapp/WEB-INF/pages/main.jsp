@@ -6,7 +6,7 @@
 --%>
 <%@ taglib uri="http://java.sun.com/jstl/core" prefix="c"%>
 <%@ page session="false" %>
-<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 
 <%@include file="include/header.jsp"%>
 

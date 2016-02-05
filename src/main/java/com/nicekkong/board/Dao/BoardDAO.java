@@ -19,4 +19,6 @@ public interface BoardDao {
 
     public List<Board> selectAll()  throws Exception;
 
+    public List<Board> listPage(int page) throws Exception;
+
 }

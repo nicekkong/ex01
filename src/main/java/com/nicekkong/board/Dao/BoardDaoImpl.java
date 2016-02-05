@@ -1,11 +1,11 @@
 package com.nicekkong.board.dao;
 
 import com.nicekkong.board.domain.Board;
-import java.util.List;
-
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * Created by 1001857 on 16. 1. 25..
@@ -41,5 +41,17 @@ public class BoardDaoImpl implements BoardDao {
     @Override
     public List<Board> selectAll() throws Exception {
         return session.selectList(namespace + ".listAll");
+    }
+
+    @Override
+    public List<Board> listPage(int page) throws Exception {
+
+        if(page <= 0) {
+            page = 1;
+        }
+
+        page = page - 1 * 10;
+
+        return session.selectList(namespace + ".listPage", page);
     }
 }

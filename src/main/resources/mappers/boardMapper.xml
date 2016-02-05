@@ -19,7 +19,7 @@
     </select>
 
     <update id="update">
-        UPDATE  tbl_board SET title= #{title}, content=#{content}
+        UPDATE  tbl_board SET title= #{title}, content=#{content}, writer=#{writer}
          WHERE  bno = #{bno}
     </update>
 
@@ -33,6 +33,16 @@
           FROM  tbl_board
          WHERE  bno > 0
          ORDER BY bno desc, regdate DESC
+         ]]>
+    </select>
+
+    <select id="listPage" resultType="Board" >
+        <![CDATA[
+        SELECT  bno, title, content, writer, regdate, viewcnt
+          FROM  tbl_board
+         WHERE  bno > 0
+         ORDER BY bno desc, regdate DESC
+         LIMIT #{page}, 10
          ]]>
     </select>
 
